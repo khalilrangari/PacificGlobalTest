@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+  <data>
+
+    <variable
+     name="viewModel"
+     type="com.android.pacificglobal.viewmodels.MainActivityViewModel" />
+  </data>
+
+  <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+     android:id="@+id/tvFilter"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_margin="@dimen/sixteenDp"
+     android:text="@string/selectFilter"
+     android:textStyle="bold"
+     android:textSize="@dimen/sixteenSp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+     android:id="@+id/spFilter"
+     android:layout_width="@dimen/zeroDp"
+     android:layout_height="wrap_content"
+     android:layout_margin="@dimen/sixteenDp"
+     android:entries="@array/filterItems"
+     android:spinnerMode="dropdown"
+     android:gravity="start"
+     app:layout_constraintStart_toEndOf="@+id/tvFilter"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintVertical_bias="0.25"/>
+
+    <com.highsoft.highcharts.core.HIChartView
+     android:id="@+id/hcView"
+     android:layout_width="match_parent"
+     android:layout_height="@dimen/zeroDp"
+     android:layout_margin="@dimen/sixteenDp"
+     app:layout_constraintTop_toBottomOf="@+id/spFilter"
+     app:layout_constraintBottom_toBottomOf="parent"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

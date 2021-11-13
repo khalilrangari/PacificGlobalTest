@@ -1,0 +1,9 @@
+<resources>
+  <string name="app_name">pacificglobal</string>
+  <string name="selectFilter">Select Filter : </string>
+  <string-array name="filterItems">
+    <item>All</item>
+    <item>Purchase</item>
+    <item>Sales</item>
+  </string-array>
+</resources>
